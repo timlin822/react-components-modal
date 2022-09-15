@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-import Modal from './components/modal/Modal';
+import Modal from 'components/modal/Modal';
 
 import './App.css';
 
@@ -19,9 +19,8 @@ function App() {
     <section className="section-padding bg-height">
       <div className="container container-padding">
         <button className="btn" onClick={modalOpenHandler}>Open Modal</button>
-        <div className={modalIsOpen?"bg-overlay bg-overlay-open":"bg-overlay"} onClick={modalCloseHandler}></div>
-        <Modal modalIsOpen={modalIsOpen} modalCloseHandler={modalCloseHandler} />
       </div>
+      <Modal modalIsOpen={modalIsOpen} modalCloseHandler={modalCloseHandler} />
     </section>
   );
 }
